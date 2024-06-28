@@ -153,13 +153,13 @@ namespace HsMod
         public static void ConfigBind(ConfigFile config)
         {
             config.Clear();
-            isPluginEnable = config.Bind("Общие", "HsMod状态", false, "是否启用插件（修改该选项后建议重启炉石）");
-            configTemplate = config.Bind("Общие", "设置模板", Utils.ConfigTemplate.DoNothing, "配置运行模板，当选项为DoNothing时，不修改任何配置。配置修改完成后自动替换回DoNothing");
-            isShortcutsEnable = config.Bind("Общие", "快捷键状态", false, "是否启用快捷键");
-            isTimeGearEnable = config.Bind("Общие", "变速齿轮状态", false, "是否启用变速齿轮");
-            timeGear = config.Bind("Общие", "变速倍率", 0, new ConfigDescription("变速齿轮倍速，1和0倍率相同，负数表示变慢", new AcceptableValueRange<int>(-32, 32)));
-            isShowFPSEnable = config.Bind("Общие", "显示FPS", false, "是否显示FPS信息（快捷键：左Crtl+P）");
-            targetFrameRate = config.Bind("Общие", "游戏帧率", -1, new ConfigDescription("游戏帧率设置，-1表示不做修改或恢复默认值（默认值可能为30）", new AcceptableValueRange<int>(-1, 2333)));
+            isPluginEnable = config.Bind("Общие", "Активация HsMod", false, "Включение плагина (для применения изменений требуется перезагрузить игру)");
+            configTemplate = config.Bind("Общие", "Шаблон", Utils.ConfigTemplate.DoNothing, "Настройка шаблон выполнения так, чтобы не изменять конфигурацию, если выбран вариант DoNothing. При сохранении настроек автоматически заменяется на DoNothing.");
+            isShortcutsEnable = config.Bind("Общие", "Состояние горячих клавиш", false, "Активация горячих клавиш");
+            isTimeGearEnable = config.Bind("Общие", "Состояние скорости игры", false, "Активация изменения скорости игры");
+            timeGear = config.Bind("Общие", "Множитель скорости игры", 0, new ConfigDescription("Изменение скорости игры, 1 и 0 одинаковы, отрицательные числа замедление, положительные ускорение", new AcceptableValueRange<int>(-32, 32)));
+            isShowFPSEnable = config.Bind("Общие", "Счётчик FPS", false, "Отображение счётчика FPS (левый Ctrl+P)");
+            targetFrameRate = config.Bind("Общие", "Блокировка FPS", -1, new ConfigDescription("Блокировка FPS, -1 - 30 FPS", new AcceptableValueRange<int>(-1, 2333)));
 
             isIGMMessageShow = config.Bind("Оптимизация", "游戏内消息", true, "（牌店无法打开时，可以尝试设置该选项为开启状态）是否显示游戏内消息（广告推销、削弱补丁、天梯结算信息等）");
             isAlertPopupShow = config.Bind("Оптимизация", "弹出消息", true, "是否显示弹窗");
