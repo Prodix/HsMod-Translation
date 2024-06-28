@@ -199,10 +199,10 @@ namespace HsMod
             goldenCardState = config.Bind("Хартстоун", "Эффекты золотых карт", Utils.CardState.Default, "Обязательные эффекты золотых карт");
             maxCardState = config.Bind("Хартстоун", "Максимальные эффекты карт", Utils.CardState.Default, "Заставить карты иметь самые высокие FX-эффекты (текущий приоритет: Diamond, Isoprint, Gold, Normal).");
 
-            isAutoRecvMercenaryRewardEnable = config.Bind("Наёмники", "自动领奖", false, "是否自动领取佣兵佣兵奖励（屏蔽宝箱）");
-            isMercenaryBattleZoom = config.Bind("Наёмники", "允许缩放", true, "（可能存在BUG）是否允许佣兵战斗时缩放画面");
-            mercenaryDiamondCardState = config.Bind("Наёмники", "钻石皮肤替换", Utils.CardState.Default, "如果可以，是否替换成钻石皮肤（优先级低于炉石-卡牌最高特效）");
-            randomMercenarySkinEnable = config.Bind("Наёмники", "随机皮肤", Utils.CardState.Default, "随机皮肤（不包含钻皮且炉石-钻石卡特效值不能为disabled）");
+            isAutoRecvMercenaryRewardEnable = config.Bind("Наёмники", "Автоматическое получение наград", false, "Автоматическое получение наград за наемников (сундуки с сокровищами)");
+            isMercenaryBattleZoom = config.Bind("Наёмники", "Масштабирование", true, "(Возможная ошибка) Разрешать наемникам приближать и отдалять экран во время боя.");
+            mercenaryDiamondCardState = config.Bind("Наёмники", "Замена алмазного скина", Utils.CardState.Default, "Если возможно, заменить его на алмазный скин (менее приоритетный, чем Hearthstone-Card Max FX).");
+            randomMercenarySkinEnable = config.Bind("Наёмники", "Случайные скины", Utils.CardState.Default, "Случайные скины (алмазные скины не включены, а значение эффекта карты Hearthstone-Diamond не может быть ОТКЛЮЧЕНО)");
 
             isShutUpBobEnable = config.Bind("Таверна", "沉默鲍勃", false, "是否让鲍勃闭嘴");
             isBgsGoldenEnable = config.Bind("Таверна", "酒馆镀金", false, "（测试，需要在炉石卡牌特效开启金卡特效）是否镀金酒馆。该镀金不会镀金随从和任务线。");
