@@ -185,19 +185,19 @@ namespace HsMod
             isMoveEnemyCardsEnable = config.Bind("Игроки", "Карточки зрителей", false, "(Не проверено) Показывать карты из руки противника в режиме зрителя");
 
 
-            isQuickModeEnable = config.Bind("Хартстоун", "快速战斗", false, "是否启用酒馆或佣兵AI快速战斗模式");
-            isFullnameShow = config.Bind("Хартстоун", "显示全名", false, "是否显示对手战网全名；如果启用该选项，还会允许添加当前对手(启动快捷键时，也允许添加对手)。");
-            isOpponentRankInGameShow = config.Bind("Хартстоун", "显示天梯等级", false, "是否在传说前显示对手天梯等级");
-            isCardTrackerEnable = config.Bind("Хартстоун", "卡牌追踪", false, "推测对手卡牌，并给出提示（例如：抉择等，有概率识别错误）");
-            isCardRevealedEnable = config.Bind("Хартстоун", "卡牌揭示", false, "以明牌方式展示已知的卡牌（有概率导致炉石自动断线重连）");
-            isSkipHeroIntro = config.Bind("Хартстоун", "跳过英雄介绍", false, "是否跳过英雄介绍(ShouldSkipMulligan)");
-            isExtendedBMEnable = config.Bind("Хартстоун", "表情无冷却", false, "是否允许无限制表情(延迟最低1.5s)");
-            isThinkEmotesEnable = config.Bind("Хартстоун", "思考表情", true, "是否允许显示思考表情");
-            receiveEnemyEmoteLimit = config.Bind("Хартстоун", "表情数量", -1, new ConfigDescription("游戏内表情数量接收限制，超过自动屏蔽对手表情，0时开局屏蔽，-1不限制（有小bug）", new AcceptableValueRange<int>(-1, 100)));
-            isOpponentGoldenCardShow = config.Bind("Хартстоун", "对手卡牌特效", true, "是否显示对手卡牌特效(覆盖ALL配置)");
-            isSignatureCardStateEnable = config.Bind("Хартстоун", "异画特效", true, "是否在卡牌最高特效中显示异画（仅影响卡牌最高特效）");
-            goldenCardState = config.Bind("Хартстоун", "金卡特效", Utils.CardState.Default, "强制金卡特效");
-            maxCardState = config.Bind("Хартстоун", "卡牌最高特效", Utils.CardState.Default, "强制卡牌最高特效特效（目前优先级：钻石、异画、金卡、普通）");
+            isQuickModeEnable = config.Bind("Хартстоун", "Быстрый бой ИИ", false, "Включение режима быстрого боя ИИ таверны или наемников");
+            isFullnameShow = config.Bind("Хартстоун", "Показ полного имени", false, "Показ полного имени баттлнета противника; если эта опция включена, она также позволит добавить текущего противника (и когда ярлык активирован, он также позволит добавить противника).");
+            isOpponentRankInGameShow = config.Bind("Хартстоун", "Показ уровней ладдера", false, "Отображать уровень ладдера противника перед легендой");
+            isCardTrackerEnable = config.Bind("Хартстоун", "Отслеживание карт", false, "Предполагать карты соперника и давать подсказки (например, выбор и т.д., с вероятностью ошибочного определения)");
+            isCardRevealedEnable = config.Bind("Хартстоун", "Раскрытие карт", false, "Отображение известных карт (с вероятностью того, что Hearthstone автоматически отключится и переподключится)");
+            isSkipHeroIntro = config.Bind("Хартстоун", "Пропуск показа героев", false, "Пропуск представление геров (должен пропускать муллиган)");
+            isExtendedBMEnable = config.Bind("Хартстоун", "Смайлики с минимальной задержкой", false, "Неограниченное количество смайликов (минимальная задержка 1,5 с)");
+            isThinkEmotesEnable = config.Bind("Хартстоун", "Отображение смайликов", true, "Отображение смайликов в игре");
+            receiveEnemyEmoteLimit = config.Bind("Хартстоун", "Число смайликов", -1, new ConfigDescription("Количество внутриигровых смайликов ограничено, большое количество автоматически блокирует смайлики противника, 0 при открытии щита, -1 не ограничено (есть небольшие ошибки)", new AcceptableValueRange<int>(-1, 100)));
+            isOpponentGoldenCardShow = config.Bind("Хартстоун", "Эффекты карт противника", true, "Отображение эффектов карт противника (отменяет ВСЕ конфигурации)");
+            isSignatureCardStateEnable = config.Bind("Хартстоун", "Отображение анаглифов", true, "Показы анаглифов самых высоких эффектов карты (влияет только на самые высокие эффекты карты)");
+            goldenCardState = config.Bind("Хартстоун", "Эффекты золотых карт", Utils.CardState.Default, "Обязательные эффекты золотых карт");
+            maxCardState = config.Bind("Хартстоун", "Максимальные эффекты карт", Utils.CardState.Default, "Заставить карты иметь самые высокие FX-эффекты (текущий приоритет: Diamond, Isoprint, Gold, Normal).");
 
             isAutoRecvMercenaryRewardEnable = config.Bind("Наёмники", "自动领奖", false, "是否自动领取佣兵佣兵奖励（屏蔽宝箱）");
             isMercenaryBattleZoom = config.Bind("Наёмники", "允许缩放", true, "（可能存在BUG）是否允许佣兵战斗时缩放画面");
