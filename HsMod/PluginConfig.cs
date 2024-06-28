@@ -161,19 +161,19 @@ namespace HsMod
             isShowFPSEnable = config.Bind("Общие", "Счётчик FPS", false, "Отображение счётчика FPS (левый Ctrl+P)");
             targetFrameRate = config.Bind("Общие", "Блокировка FPS", -1, new ConfigDescription("Блокировка FPS, -1 - 30 FPS", new AcceptableValueRange<int>(-1, 2333)));
 
-            isIGMMessageShow = config.Bind("Оптимизация", "游戏内消息", true, "（牌店无法打开时，可以尝试设置该选项为开启状态）是否显示游戏内消息（广告推销、削弱补丁、天梯结算信息等）");
-            isAlertPopupShow = config.Bind("Оптимизация", "弹出消息", true, "是否显示弹窗");
-            responseAlertPopup = config.Bind("Оптимизация", "弹出响应", Utils.AlertPopupResponse.DONOTHING, "在屏蔽弹出消息时，如何回应弹窗");
-            isOnApplicationFocus = config.Bind("Оптимизация", "应用焦点", true, "isOnApplicationFocus");
-            isRewardToastShow = config.Bind("Оптимизация", "结算展示", true, "是否展示结算任务、成就奖励、升级提示等（可能导致领取奖励时无提示）");
-            isAutoOpenBoxesRewardEnable = config.Bind("Оптимизация", "自动开盒", false, "是否自动打开竞技场（对决、佣兵等）结算宝箱");
-            isAutoExit = config.Bind("Оптимизация", "报错退出", false, "遇到错误是否自动退出");
+            isIGMMessageShow = config.Bind("Оптимизация", "Игровые сообщения", true, "(Если вы не можете открыть магазин карт, попробуй те включить это) Отображение игровых сообщений (рекламные сообщения, исправления, информация о таблице лидеров и т. д.)");
+            isAlertPopupShow = config.Bind("Оптимизация", "Всплыващие сообщения", true, "Показ вспылывающих сообщений");
+            responseAlertPopup = config.Bind("Оптимизация", "Реакция на всплывающие сообщения", Utils.AlertPopupResponse.DONOTHING, "Как реагировать на всплывающие уведомления при блокировке всплывающих сообщений");
+            isOnApplicationFocus = config.Bind("Оптимизация", "Фокус приложения", true, "isOnApplicationFocus");
+            isRewardToastShow = config.Bind("Оптимизация", "Окно наград", true, "Отображение игровых заданий, наград за достижения, советы по улучшению и т. д. (при получении наград маркеры могут отсутствовать)");
+            isAutoOpenBoxesRewardEnable = config.Bind("Оптимизация", "Автоматическое открытие наград", false, "Автоматическое открытие сундуков арены (дуэли, наемники и т. д.)");
+            isAutoExit = config.Bind("Оптимизация", "Автоматический выход", false, "Автоматически завершать работу при возникновении ошибки");
             //isAutoRestart = config.Bind("优化", "退出时重启", false, "（可能无效）遇到错误是否自动重启");
-            isShowCardLargeCount = config.Bind("Оптимизация", "收藏卡牌数量", false, "是否显示收藏卡牌数量大于等于10时的数量（选中时暂有Bug）");
-            isShowCollectionCardIdEnable = config.Bind("Оптимизация", "显示卡牌ID", false, "是否在右键选择卡牌（皮肤）时，显示并复制所选内容的CardID");
-            isBypassDeckShareCodeCheckEnable = config.Bind("Оптимизация", "卡组分享代码检测", false, "是否移除卡组分享代码检测");
-            isShowRetireForever = config.Bind("Оптимизация", "显示放弃", false, "允许在0-0时放弃套牌");
-            isIdleKickEnable = config.Bind("Оптимизация", "允许掉线", true, "（尚未测试）是否允许长时间无操作掉线（启动游戏时无法加载配置）");
+            isShowCardLargeCount = config.Bind("Оптимизация", "Количество карт в коллекции", false, "Отображаемое количество карт в коллекции, если их число больше или равно 10 (временная ошибка при выборе)");
+            isShowCollectionCardIdEnable = config.Bind("Оптимизация", "Показ ID карты в коллекции", false, "Отображение и копирование CardID выбранной карты при щелчке правой кнопкой мыши на карту (скин)");
+            isBypassDeckShareCodeCheckEnable = config.Bind("Оптимизация", "Код шеринга колоды", false, "Обнаружение кода шеринга колоды");
+            isShowRetireForever = config.Bind("Оптимизация", "Сдача сетов", false, "Сдача сетов при счёте 0-0");
+            isIdleKickEnable = config.Bind("Оптимизация", "Бездействие", true, "(Пока не тестировалось) Разрешить ли длительные периоды бездействия (конфигурация не загружается при запуске игры)");
 
 
             isQuickPackOpeningEnable = config.Bind("Паки", "开包加速", false, "开包加速，使用空格开包时直接展示结果");
