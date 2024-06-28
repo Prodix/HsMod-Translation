@@ -173,12 +173,12 @@ namespace HsMod
             isShowCollectionCardIdEnable = config.Bind("Оптимизация", "Показ ID карты в коллекции", false, "Отображение и копирование CardID выбранной карты при щелчке правой кнопкой мыши на карту (скин)");
             isBypassDeckShareCodeCheckEnable = config.Bind("Оптимизация", "Код шеринга колоды", false, "Обнаружение кода шеринга колоды");
             isShowRetireForever = config.Bind("Оптимизация", "Сдача сетов", false, "Сдача сетов при счёте 0-0");
-            isIdleKickEnable = config.Bind("Оптимизация", "Бездействие", true, "(Пока не тестировалось) Разрешить ли длительные периоды бездействия (конфигурация не загружается при запуске игры)");
+            isIdleKickEnable = config.Bind("Оптимизация", "Бездействие", true, "(Пока не тестировалось) Разрешить длительные периоды бездействия (конфигурация не загружается при запуске игры)");
 
 
-            isQuickPackOpeningEnable = config.Bind("Паки", "开包加速", false, "开包加速，使用空格开包时直接展示结果");
-            isAutoPackOpeningEnable = config.Bind("Паки", "自动开包", false, "（慎用，有BUG！）开完全部卡包，不区分卡包品类（基于开包加速）");
-            isAutoRefundCardDisenchantEnable = config.Bind("Паки", "自动分解", false, "是否在开包时自动分解全额反尘的卡");
+            isQuickPackOpeningEnable = config.Bind("Паки", "Ускоренное открытие паков", false, "Ускоренное открытие паков, прямое отображение результатов при использовании пространства для открытия пакетов");
+            isAutoPackOpeningEnable = config.Bind("Паки", "Автоматическое открытие паков", false, "(Используйте с осторожностью, есть ошибки!) Открывайте все паки карт, не различайте категории паки карт (основано на ускорении открытия паков)");
+            isAutoRefundCardDisenchantEnable = config.Bind("Паки", "Уничтожение карт", false, "Автоматическое уничтожение полных антипылевых карты при открытии паков");
 
             isAutoReportEnable = config.Bind("Игроки", "自动举报", false, "对局结束后自动举报对手昵称违规、作弊和脚本、恶意投降");
             // isAutoReportEnable = config.Bind("好友", "自动举报", true, new ConfigDescription("对局结束后自动举报对手昵称违规、作弊和脚本、恶意投降", null, new object[] { "Advanced" }));
