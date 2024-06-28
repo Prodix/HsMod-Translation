@@ -180,9 +180,9 @@ namespace HsMod
             isAutoPackOpeningEnable = config.Bind("Паки", "Автоматическое открытие паков", false, "(Используйте с осторожностью, есть ошибки!) Открывайте все паки карт, не различайте категории паки карт (основано на ускорении открытия паков)");
             isAutoRefundCardDisenchantEnable = config.Bind("Паки", "Уничтожение карт", false, "Автоматическое уничтожение полных антипылевых карты при открытии паков");
 
-            isAutoReportEnable = config.Bind("Игроки", "自动举报", false, "对局结束后自动举报对手昵称违规、作弊和脚本、恶意投降");
+            isAutoReportEnable = config.Bind("Игроки", "Авто репорт", false, "Автоматическая отправка репортов о нарушениях соперников, читерстве и скриптинге, а также о злонамеренных сдачах в конце игры");
             // isAutoReportEnable = config.Bind("好友", "自动举报", true, new ConfigDescription("对局结束后自动举报对手昵称违规、作弊和脚本、恶意投降", null, new object[] { "Advanced" }));
-            isMoveEnemyCardsEnable = config.Bind("Игроки", "观战展示卡牌", false, "（尚未测试）在Ob中展示(旋转)对手手中的牌");
+            isMoveEnemyCardsEnable = config.Bind("Игроки", "Карточки зрителей", false, "(Не проверено) Показывать карты из руки противника в режиме зрителя");
 
 
             isQuickModeEnable = config.Bind("Хартстоун", "快速战斗", false, "是否启用酒馆或佣兵AI快速战斗模式");
