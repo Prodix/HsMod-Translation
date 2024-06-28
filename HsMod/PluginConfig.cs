@@ -204,8 +204,8 @@ namespace HsMod
             mercenaryDiamondCardState = config.Bind("Наёмники", "Замена алмазного скина", Utils.CardState.Default, "Если возможно, заменить его на алмазный скин (менее приоритетный, чем Hearthstone-Card Max FX).");
             randomMercenarySkinEnable = config.Bind("Наёмники", "Случайные скины", Utils.CardState.Default, "Случайные скины (алмазные скины не включены, а значение эффекта карты Hearthstone-Diamond не может быть ОТКЛЮЧЕНО)");
 
-            isShutUpBobEnable = config.Bind("Таверна", "沉默鲍勃", false, "是否让鲍勃闭嘴");
-            isBgsGoldenEnable = config.Bind("Таверна", "酒馆镀金", false, "（测试，需要在炉石卡牌特效开启金卡特效）是否镀金酒馆。该镀金不会镀金随从和任务线。");
+            isShutUpBobEnable = config.Bind("Таверна", "Тихий Боб", false, "Отключение реплик Боба");
+            isBgsGoldenEnable = config.Bind("Таверна", "Золочение таверны", false, "(Тестирование, требуется, чтобы эффекты золотых карт были включены в Hearthstone Card Effects) Золочение таверны. Это золочение не позолотит вложения и квестовые линии.");
             //考虑导出单独配置
             skinCoin = config.Bind("Скины", "硬币", -1, "幸运币的偏好ID，-1表示不做修改（游戏内模拟拔线可以实时更新）");
             skinCardBack = config.Bind("Скины", "卡背", -1, "卡背的偏好ID，-1表示不做修改（实时生效）");
